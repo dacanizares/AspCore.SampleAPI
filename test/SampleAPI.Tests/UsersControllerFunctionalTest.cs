@@ -14,11 +14,11 @@ namespace SampleAPI.Tests
         [Fact]
         public async Task Get_User_ReturnsSeededList()
         {
-            // Ejecutar
+            // Execute
             var response = await _client.GetAsync(Endpoints.USERS);
             var content = await response.Content.ReadAsStringAsync();
 
-            // Validar
+            // Check
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
             Assert.Equal(SeedExtensions.UsersSeed.Serialize(), content);
         }
