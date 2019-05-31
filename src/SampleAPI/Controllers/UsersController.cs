@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using SampleAPI.Commands;
 using SampleAPI.Domain;
 using SampleAPI.Domain.Managers;
+using SampleAPI.ViewModels;
 
 namespace SampleAPI.Controllers
 {
@@ -49,7 +50,10 @@ namespace SampleAPI.Controllers
         {
             var user = _mapper.Map<User>(createUserCommand);
             await _behavior.CreateUserAsync(user);
-            return CreatedAtAction(nameof(GetByUsernameAsync), new { username = user.Username }, user);
+            return CreatedAtAction(
+                nameof(GetByUsernameAsync), 
+                new { username = user.Username }, 
+                _mapper.Map<BasicUserViewModel>(user));
         }
 
         [HttpPut("{username}")]
