@@ -16,12 +16,12 @@ namespace SampleAPI.Domain.Infrastructure.Repositories
 
         public async Task<List<User>> FindAllAsync()
         {
-            return await _context.Users.ToListAsync();
+            return await _context.Users.AsNoTracking().ToListAsync();
         }
 
         public async Task<User> FindByUsernameAsync(string username)
         {
-            return await _context.Users.FirstOrDefaultAsync(user => user.Username == username);
+            return await _context.Users.AsNoTracking().FirstOrDefaultAsync(user => user.Username == username);
         }
 
         public async Task CreateUserAsync(User user)
