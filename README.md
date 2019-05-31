@@ -1,6 +1,6 @@
 # Sample API
 
-This is an example ASP Core project that tries to show how to create simple project balancing an agile coding within a structured solution, avoiding unnecessary complexity.
+This is an example ASP Core project that tries to show how to create a simple project balancing an agile coding within a structured solution, avoiding unnecessary complexity.
 
 ## Instructions to RUN locally.
 
