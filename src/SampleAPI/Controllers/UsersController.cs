@@ -32,7 +32,7 @@ namespace SampleAPI.Controllers
         [HttpGet("{username}")]
         [ProducesResponseType(200)]
         [ProducesResponseType(404)]
-        public async Task<ActionResult<User>> GetByIdAsync(string username)
+        public async Task<ActionResult<User>> GetByUsernameAsync(string username)
         {
             var existingUser = await _behavior.FindByUsernameAsync(username);
             if (existingUser == null)
@@ -49,7 +49,7 @@ namespace SampleAPI.Controllers
         {
             var user = _mapper.Map<User>(createUserCommand);
             await _behavior.CreateUserAsync(user);
-            return CreatedAtAction(nameof(GetByIdAsync), new { username = user.Username }, user);
+            return CreatedAtAction(nameof(GetByUsernameAsync), new { username = user.Username }, user);
         }
 
         [HttpPut("{username}")]
