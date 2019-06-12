@@ -1,5 +1,7 @@
 # Sample API
 
+[![Build status](https://ci.appveyor.com/api/projects/status/ur4xs9mt3s3q3big?svg=true)](https://ci.appveyor.com/project/dacanizares/aspcore-sampleapi)
+
 This is an example ASP Core project that tries to show how to create a simple project balancing an agile coding within a structured solution, avoiding unnecessary complexity.
 
 ## Instructions to RUN locally.
