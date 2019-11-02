@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using SampleAPI.Domain;
 
-namespace SampleAPI.Domain.Infrastructure.Data
+namespace SampleAPI.Infrastructure
 {
     public class ApplicationDbContext : DbContext
     {

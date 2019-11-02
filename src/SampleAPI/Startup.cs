@@ -12,9 +12,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using SampleAPI.Domain.Infrastructure.Data;
 using SampleAPI.Domain.Infrastructure.Repositories;
 using SampleAPI.Domain.Managers;
+using SampleAPI.Infrastructure;
+using SampleAPI.Infrastructure.Repositories;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace SampleAPI

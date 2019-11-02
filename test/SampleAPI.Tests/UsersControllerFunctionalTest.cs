@@ -1,8 +1,7 @@
 ﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Serialization;
 using SampleAPI.Commands;
 using SampleAPI.Domain;
-using SampleAPI.Domain.Infrastructure.Data;
+using SampleAPI.Infrastructure;
 using SampleAPI.Tests.Common;
 using SampleAPI.Tests.Util;
 using SampleAPI.ViewModels;

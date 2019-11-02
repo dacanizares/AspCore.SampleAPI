@@ -1,9 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using SampleAPI.Domain;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SampleAPI.Domain.Infrastructure.Data
+namespace SampleAPI.Infrastructure
 {
     public static class SeedExtensions
     {

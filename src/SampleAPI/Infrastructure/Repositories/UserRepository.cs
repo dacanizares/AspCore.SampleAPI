@@ -1,9 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SampleAPI.Domain.Infrastructure.Data;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using SampleAPI.Domain.Infrastructure.Repositories;
+using SampleAPI.Domain;
 
-namespace SampleAPI.Domain.Infrastructure.Repositories
+namespace SampleAPI.Infrastructure.Repositories
 {
     public class UserRepository : IUserRepository
     {
