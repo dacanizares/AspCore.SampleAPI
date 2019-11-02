@@ -13,17 +13,7 @@ namespace SampleAPI.Domain.Managers
         public UserBehavior(IUserRepository repository)
         {
             _repository = repository;
-        }
-
-        public async Task<List<User>> FindAllAsync()
-        {
-            return await _repository.FindAllAsync();
-        }
-
-        public async Task<User> FindByUsernameAsync(string username)
-        {
-            return await _repository.FindByUsernameAsync(username);
-        }
+        }        
 
         public async Task CreateUserAsync(User user)
         {

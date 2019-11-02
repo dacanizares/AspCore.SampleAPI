@@ -16,6 +16,7 @@ using SampleAPI.Domain.Infrastructure.Repositories;
 using SampleAPI.Domain.Managers;
 using SampleAPI.Infrastructure;
 using SampleAPI.Infrastructure.Repositories;
+using SampleAPI.Queries;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace SampleAPI
@@ -42,6 +43,7 @@ namespace SampleAPI
 
             // Add other components
             services.AddScoped<IUserBehavior, UserBehavior>();
+            services.AddScoped<IUserQueries, UserQueries>();
             services.AddScoped<IUserRepository, UserRepository>();
 
             // Add Automapper

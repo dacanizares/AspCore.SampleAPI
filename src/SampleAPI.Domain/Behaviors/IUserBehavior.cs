@@ -7,8 +7,6 @@ namespace SampleAPI.Domain.Managers
     {
         Task CreateUserAsync(User user);
         Task DeleteUserAsync(User user);
-        Task<List<User>> FindAllAsync();
-        Task<User> FindByUsernameAsync(string username);
         Task UpdateUserAsync(User user);
     }
 }

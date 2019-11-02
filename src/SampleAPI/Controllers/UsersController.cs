@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using SampleAPI.Commands;
 using SampleAPI.Domain;
 using SampleAPI.Domain.Managers;
+using SampleAPI.Queries;
 using SampleAPI.ViewModels;
 
 namespace SampleAPI.Controllers
@@ -15,11 +16,14 @@ namespace SampleAPI.Controllers
     {
         private readonly IUserBehavior _behavior;
 
+        private readonly IUserQueries _queries;
+
         private readonly IMapper _mapper;
 
-        public UsersController(IUserBehavior behavior, IMapper mapper)
+        public UsersController(IUserBehavior behavior, IUserQueries queries, IMapper mapper)
         {
             _behavior = behavior;
+            _queries = queries;
             _mapper = mapper;
         }
 
@@ -27,7 +31,7 @@ namespace SampleAPI.Controllers
         [ProducesResponseType(200)]
         public async Task<ActionResult<IEnumerable<User>>> GetAllAsync()
         {
-            return await _behavior.FindAllAsync();
+            return await _queries.FindAllAsync();
         }
 
         [HttpGet("{username}")]
@@ -35,7 +39,7 @@ namespace SampleAPI.Controllers
         [ProducesResponseType(404)]
         public async Task<ActionResult<User>> GetByUsernameAsync(string username)
         {
-            var existingUser = await _behavior.FindByUsernameAsync(username);
+            var existingUser = await _queries.FindByUsernameAsync(username);
             if (existingUser == null)
             {
                 return NotFound();
@@ -61,7 +65,7 @@ namespace SampleAPI.Controllers
         [ProducesResponseType(404)]
         public async Task<IActionResult> UpdateUserAsync(string username, UpdateUserCommand updateUserCommand)
         {
-            var existingUser = await _behavior.FindByUsernameAsync(username);
+            var existingUser = await _queries.FindByUsernameAsync(username);
             if (existingUser == null)
             {
                 return NotFound();
@@ -77,7 +81,7 @@ namespace SampleAPI.Controllers
         [ProducesResponseType(404)]
         public async Task<IActionResult> DeleteUserAsync(string username)
         {
-            var existingUser = await _behavior.FindByUsernameAsync(username);
+            var existingUser = await _queries.FindByUsernameAsync(username);
             if (existingUser == null)
             {
                 return NotFound();
