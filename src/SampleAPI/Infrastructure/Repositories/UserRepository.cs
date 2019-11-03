@@ -13,17 +13,7 @@ namespace SampleAPI.Infrastructure.Repositories
         public UserRepository(ApplicationDbContext context)
         {
             _context = context;
-        }
-
-        public async Task<List<User>> FindAllAsync()
-        {
-            return await _context.Users.AsNoTracking().ToListAsync();
-        }
-
-        public async Task<User> FindByUsernameAsync(string username)
-        {
-            return await _context.Users.AsNoTracking().FirstOrDefaultAsync(user => user.Username == username);
-        }
+        }        
 
         public async Task CreateUserAsync(User user)
         {
