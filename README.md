@@ -12,6 +12,22 @@ This is an example ASP Core project that tries to show how to create a simple pr
 
 * Run!
 
+## Project structure
+
+* **SampleApi.Domain**:
+  * **Behaviors**: Business logic.
+  * **Infrastructure**: Repository contracts.
+  * **Models**: Domain models.
+
+* **SampleApi**:
+  * **Commands**: Actions that can be executed by the controllers.
+  * **Controllers**: They contain mappings and calls to behaviors or queries to execute the requested action. If you prefer, you can move mappings to the behaviors class to make your controllers *completely dump*, both options are still valid. ;)
+  * **Infrastructure**:  Application DbContext and repositories implementations.
+  * **Mappings**: AutoMapper profiles.
+  * **Migrations**: EF Core migrations and Data Seeds.
+  * **Queries**: Data retrieval components.
+  * **ViewModels**: Models to display info in the UI.
+  
 ## More information
 
 * Check [our wiki](https://equilaterus.github.io/wikilaterus/)
