@@ -1,4 +1,4 @@
-﻿using SampleAPI.Domain.Infrastructure.Repositories;
+﻿using SampleAPI.Domain.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -13,7 +13,7 @@ namespace SampleAPI.Domain.Managers
         public UserBehavior(IUserRepository repository)
         {
             _repository = repository;
-        }        
+        }
 
         public async Task CreateUserAsync(User user)
         {

@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SampleAPI.Domain;
+using SampleAPI.Migrations.Data;
 
 namespace SampleAPI.Infrastructure
 {

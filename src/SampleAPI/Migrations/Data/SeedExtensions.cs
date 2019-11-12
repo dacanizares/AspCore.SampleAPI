@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SampleAPI.Infrastructure
+namespace SampleAPI.Migrations.Data
 {
     public static class SeedExtensions
     {

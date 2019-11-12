@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace SampleAPI.Domain.Infrastructure.Repositories
+namespace SampleAPI.Domain.Infrastructure
 {
     public interface IUserRepository
     {
