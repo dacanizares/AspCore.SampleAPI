@@ -65,6 +65,11 @@ namespace SampleAPI.Controllers
         [ProducesResponseType(404)]
         public async Task<IActionResult> UpdateUserAsync(string username, UpdateUserCommand updateUserCommand)
         {
+            // We are re-using existing Queries
+            // you can also provide methods on the repository 
+            // (they could be exposed through a behavior class)
+            // strictly related with transactional logic and 
+            // completely specialize your queries with data displaying tasks.
             var existingUser = await _queries.FindByUsernameAsync(username);
             if (existingUser == null)
             {
