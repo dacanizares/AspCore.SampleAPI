@@ -21,7 +21,7 @@ This is an example ASP Core project that tries to show how to create a simple pr
 
 * **SampleApi**:
   * **Commands**: Actions that can be executed by the controllers.
-  * **Controllers**: They contain mappings and calls to behaviors or queries to execute the requested action. If you prefer, you can move mappings to the behaviors class to make your controllers *completely dump*, both options are still valid. ;)
+  * **Controllers**: They contain mappings and calls to behaviors or queries to execute the requested action. If you prefer, you can move mappings to the behaviors class (or a new intermediate component) to make your controllers *completely dump*, both options are still valid. ;)
   * **Infrastructure**:  Application DbContext and repositories implementations.
   * **Mappings**: AutoMapper profiles.
   * **Migrations**: EF Core migrations and Data Seeds.
@@ -30,8 +30,6 @@ This is an example ASP Core project that tries to show how to create a simple pr
   
 ## More information
 
-* Check [our wiki](https://equilaterus.github.io/wikilaterus/)
+* Do you want to go deeper? [Try this approach using Vortex](https://github.com/equilaterus/VortexSamples.ConcurrentOrdering).
 
-  * [ASP Core section](https://equilaterus.github.io/wikilaterus/wiki/ASP-Core.html)
-  
-  * [C# Coding Guidelines](https://equilaterus.github.io/wikilaterus/wiki/C%23-coding-guidelines.html)
+* Check [our wiki](https://equilaterus.github.io/wikilaterus/)
